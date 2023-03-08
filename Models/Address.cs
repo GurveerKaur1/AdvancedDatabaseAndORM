@@ -10,10 +10,16 @@
         public string StateProvince { get; set; }
         public string CountryRegion { get; set; }
 
-        public string PostalCode { get; set; }
-        public CustomerAddress CustomerAddress { get; set; }
-        public Guid rowguid { get; set; }
-        public DateTime ModifiedDate { get; set; }
+        public HashSet<CustomerAddress> customerAddresses { get; set; } = new HashSet<CustomerAddress>();
+       
+        public Address( string addressLine1, string addressLine2, string city, string stateProvince, string countryRegion)
+        {
+            AddressLine1 = addressLine1;
+            AddressLine2 = addressLine2;
+            City = city;
+            StateProvince = stateProvince;
+            CountryRegion = countryRegion;
+        }
 
         public Address()
         {

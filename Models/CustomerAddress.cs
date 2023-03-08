@@ -9,10 +9,6 @@
         public Address Address { get; set; }
         public int AddressId { get; set; }
 
-        public string AddressType { get; set; }
-        public Guid rowguid { get; set; }
-        public DateTime ModifiedDate { get; set; }
-
         public CustomerAddress() { }
     }
 }
