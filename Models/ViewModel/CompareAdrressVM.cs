@@ -22,22 +22,7 @@ namespace AdvancedDatabaseAndORM.Models.ViewModel
         public string customerAddressId1 { get; set; }
 
         public Customer customer { get; set; }
-        public CompareAdrressVM(DbSet<Customer> customers, DbSet<Address> addresses, DbSet<CustomerAddress> customerAddresses)
-        {
-            foreach(Customer c in customers)
-            {
-               Customers.Add(new SelectListItem(c.FirstName, c.Id.ToString()));
-            }
-          foreach(Address a in addresses)
-            {
-                Addresses.Add(new SelectListItem(a.AddressLine1, a.Id.ToString()));
-            }
-          foreach(CustomerAddress d in customerAddresses)
-            {
-              CustomerAddresses.Add(new SelectListItem(d.AddressId.ToString(), d.Id.ToString()));
-            }
-          
-        }
+        
         public CompareAdrressVM(DbSet<Customer> customers, DbSet<Address> addresses)
         {
             foreach (Customer c in customers)

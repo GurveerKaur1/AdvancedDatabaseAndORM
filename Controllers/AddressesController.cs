@@ -40,7 +40,7 @@ namespace AdvancedDatabaseAndORM.Controllers
         }
 
         [HttpPost]
-        public IActionResult CompareAddress(CompareAdrressVM vm)
+        public IActionResult CompareAddress(CompareAdrressVM vm) 
         {
             Address address = _context.Address.First(m => m.Id == Int32.Parse(vm.addressId1));
             Customer customer3 = _context.Customer.First(c => c.Id== Int32.Parse(vm.customerId1));

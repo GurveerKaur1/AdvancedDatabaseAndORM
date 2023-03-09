@@ -51,7 +51,7 @@ namespace AdvancedDatabaseAndORM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Address");
+                    b.ToTable("Address", (string)null);
                 });
 
             modelBuilder.Entity("AdvancedDatabaseAndORM.Models.Customer", b =>
@@ -79,7 +79,7 @@ namespace AdvancedDatabaseAndORM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customer");
+                    b.ToTable("Customer", (string)null);
                 });
 
             modelBuilder.Entity("AdvancedDatabaseAndORM.Models.CustomerAddress", b =>
@@ -102,7 +102,7 @@ namespace AdvancedDatabaseAndORM.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("CustomerAddress");
+                    b.ToTable("CustomerAddress", (string)null);
                 });
 
             modelBuilder.Entity("AdvancedDatabaseAndORM.Models.CustomerAddress", b =>
