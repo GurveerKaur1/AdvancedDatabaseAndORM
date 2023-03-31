@@ -1,0 +1,18 @@
+﻿@model AdvancedDatabaseAndORM.Models.ViewModel.CompareAdrressVM
+<form asp-action="CompareAddress" method="post">
+    <div>
+        <select asp-for="addressId1" asp-items="@Model.Addresses"></select>
+    </div>
+    <div>
+        <select asp-for="customerId1" asp-items="@Model.Customers"></select>
+    </div>
+   @* <div>
+        <input asp-for="Rating" placeholder="Rating" />
+    </div*@>
+    @*<div>
+        <label asp-for="Rating" />
+        <input asp-for="Pay" />
+    </div>*@
+    <input type="hidden" name="secret" value="Special note that cannot be seen" />
+    <input type="Submit" value="Submit" />
+</form>
